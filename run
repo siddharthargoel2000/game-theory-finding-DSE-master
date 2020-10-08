@@ -1,0 +1,8 @@
+#!/bin/sh	
+if [ $# -eq 2 ]
+then
+	python assign1_q2.py $1 > $2
+	echo 
+else
+	printf "Invalid input found.\nUsage: ./run <input file> <output file>\n"
+fi
