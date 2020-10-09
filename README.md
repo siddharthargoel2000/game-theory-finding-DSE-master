@@ -3,16 +3,6 @@ Find all weakly dominant strategy equilibria for an n-person game given nfg file
 
 ## Language and modules
 *Language:* python3
-*Modules imported:*
-* sys
-
-##Displays all dominant strategy equilibria for a n-player game
-
-To run the file
-./run <inputfile> <outputfile>
-
-sample command:
-./run Example1.nfg output1
 
 ## Input Format 
 
