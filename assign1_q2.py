@@ -20,7 +20,6 @@ class InvalidFileException(Exception):
             return 'InvalidFileException has been raised'
 
 
-
 class NfgGameParser(object):
     # various error messages used by the InvalidFileException
     EXTREME_VERSIONS_MESSAGE = "\nInvalid Format, We have included examples of our test formats of input .nfg file inside NfgTestCases folder, kindly take a look at it and " \
@@ -262,9 +261,9 @@ def print_weak(indexes, valueindexes = [], start = 0):
 for count in range(1,4):
     
     # Add file name here-------->>>
-    file_name = 'D:\ACADEMICS 5th\CS771A\game-theory-finding-DSE-master\Example{}.nfg'.format(count)
+    file_name = r'D:\ACADEMICS 5th\CS771A\game-theory-finding-DSE-master\Example{}.nfg'.format(count)
     try:
-        game = NfgGameParser.parse_nfg_file(file_name);
+        game = NfgGameParser.parse_nfg_file(file_name)
     except InvalidFileException as e: # exception handling
         print(e)
     except Exception as e:
@@ -278,6 +277,7 @@ for count in range(1,4):
     multiplier = []
     temp = 1
     equilibria = []
+    
     for i in range(len(strategies)):
         multiplier.append(temp)
         temp = temp * strategies[i]
@@ -287,7 +287,7 @@ for count in range(1,4):
     strong_eq = []
     gamedata = []
     for x in np.nditer(game['pay_off_values']):
-        gamedata.append(int(x))
+        gamedata.append(float(x))
             
         
     # print find_strongly_dominant_eq(0, [1, 2], 1)
