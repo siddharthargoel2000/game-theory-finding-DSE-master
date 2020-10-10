@@ -106,7 +106,7 @@ def computeSDS( file_name ):
                         res_list.append(1)
                     else:
                         res_list.append(0)
-            print(res_list)   # <<<<<<<<<<<<<<<-------------
+            return (res_list)   # <<<<<<<<<<<<<<<-------------
             
     
     
@@ -219,7 +219,7 @@ def computeWDS( file_name ):
                     res_list.append(1)
                 else:
                     res_list.append(0)
-        print(res_list)   # <<<<<<<<<<<<<<<-------------
+        return (res_list)   # <<<<<<<<<<<<<<<-------------
     if (counter):
         res_list = []
         for equilibrium in equilibria:
