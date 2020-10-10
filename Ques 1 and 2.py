@@ -222,6 +222,7 @@ def computeWDS( file_name ):
         return (res_list)   # <<<<<<<<<<<<<<<-------------
     if (counter):
         res_list = []
+        wdse_list = []
         for equilibrium in equilibria:
             for j in range(len(equilibrium)):
                 for i in range(strategies[j]):
@@ -229,4 +230,10 @@ def computeWDS( file_name ):
                         res_list.append(1)
                     else:
                         res_list.append(0)
-            print(res_list)   # <<<<<<<<<<<<<<<-------------
+            wdse_list.append(res_list)   # <<<<<<<<<<<<<<<-------------
+        final_list = [0]*len(wdse_list[0])
+        for i in range(len(wdse_list)):
+            for j in range(len(wdse_list[0])):
+                if wdse_list[i][j]==1:
+                    final_list[j]=1
+        return final_list
